@@ -26,7 +26,7 @@ author:
   pronouns         : "he/him"  
   bio              : "ssingh37 AT umd dot edu"
   location         : "College Park, MD, USA"
-  employer         : "University of Maryland"
+  employer         : "Ph.D. Candidate<br>University of Maryland"
  
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -34,7 +34,7 @@ author:
   orcid            : "http://orcid.org/0000-0002-2756-4290"
  
   # Repositories and software development
-  github           : "https://github.com/siddharth9820/"
+  github           : "siddharth9820/"
  
   # Social media
   linkedin         : # siddharth-singh-a7232a114
