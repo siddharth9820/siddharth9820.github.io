@@ -21,9 +21,9 @@ repository               : "siddharth9820/siddharth9820.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Siddharth Singh"
-  pronouns         : # example: "she/her"  
+  pronouns         : "he/him"  
   bio              : "ssingh37 AT umd dot edu"
   location         : "College Park, MD, USA"
   employer         : "University of Maryland"
