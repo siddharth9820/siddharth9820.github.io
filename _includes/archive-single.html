@@ -12,6 +12,20 @@
   {% assign title = post.title %}
 {% endif %}
 
+<script>
+  function toggleCitation() {
+    var citation = document.getElementById("citation");
+    var button = event.target;
+    if (citation.style.display === "none") {
+      citation.style.display = "block";
+      button.innerText = "Hide Bibtex";
+    } else {
+      citation.style.display = "none";
+      button.innerText = "Show Bibtex";
+    }
+  }
+</script>
+
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
@@ -52,10 +66,14 @@
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
     
-    {% if post.citation and post.paperurl and post.slidesurl %}
+    <!-- {% if post.citation and post.paperurl and post.slidesurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a></p>
+      <!-- <p>Recommended citation: {{ post.citation }} <br /> <a href="{{ post.paperurl }}">Download Paper</a></p> -->
+      <!-- <p>
+        <button onclick="toggleCitation()">Show Citation</button>
+      </p>
+      <p id="citation" style="display:none;">Recommended citation: {{ post.citation }}</p>
     {% elsif post.citation and post.slidesurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.citation %}
@@ -64,6 +82,12 @@
       <p><a href=" {{ post.paperurl }} ">Download Paper</a></p>
     {% elsif post.slidesurl %}
       <p>Download <a href="{{ post.slidesurl }}">Download Slides</a></p></p>
+    {% endif %} --> 
+    {% if post.citation %}
+    <p>
+      <button onclick="toggleCitation()" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Show Bibtex</button>
+    </p>
+    <pre id="citation" style="display:none; background-color: #f4f4f9; border-left: 4px solid #4CAF50; padding: 20px; white-space: pre-wrap; word-wrap: break-word; font-family: 'Courier New', Courier, monospace; color: #333; line-height: 1.5; font-size: 14px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">{{ post.citation }}</pre>
     {% endif %}
 
   </article>
