@@ -18,10 +18,10 @@
     var button = event.target;
     if (citation.style.display === "none") {
       citation.style.display = "block";
-      button.innerText = "Hide Bibtex";
+      button.innerText = "Bibtex";
     } else {
       citation.style.display = "none";
-      button.innerText = "Show Bibtex";
+      button.innerText = "Bibtex";
     }
   }
 </script>
@@ -85,7 +85,7 @@
     {% endif %} --> 
     {% if post.citation %}
     <p>
-      <button onclick="toggleCitation()" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Show Bibtex</button>
+      <button onclick="toggleCitation()" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Bibtex</button>
     </p>
     <pre id="citation" style="display:none; background-color: #f4f4f9; border-left: 4px solid #4CAF50; padding: 20px; white-space: pre-wrap; word-wrap: break-word; font-family: 'Courier New', Courier, monospace; color: #333; line-height: 1.5; font-size: 14px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">{{ post.citation }}</pre>
     {% endif %}
