@@ -14,16 +14,36 @@
 
 <script>
   function toggleCitation() {
-    var citation = document.getElementById("citation");
+    var citation = document.getElementById("citationContainer");
     var button = event.target;
-    if (citation.style.display === "none") {
+    if (citation.style.display === "none" || citationContainer.style.display === "") {
       citation.style.display = "block";
-      button.innerText = "Bibtex";
+      button.innerText = "Hide Bibtex";
     } else {
       citation.style.display = "none";
-      button.innerText = "Bibtex";
+      button.innerText = "Show Bibtex";
     }
   }
+
+  function copyCitation() {
+      // Retrieve the raw citation text, preserving formatting
+      var citationText = document.getElementById("citation").innerText; 
+      
+      // Use Clipboard API to copy the text
+      navigator.clipboard.writeText(citationText).then(function() {
+        // Change button text to confirm the copy
+        var copyButton = document.getElementById("copyButton");
+        copyButton.innerText = "Copied!";
+        
+        // Revert the button text after 2 seconds
+        setTimeout(function() {
+          copyButton.innerText = "Copy Bibtex";
+        }, 2000);
+      }, function(err) {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+
 </script>
 
 <div class="{{ include.type | default: "list" }}__item">
@@ -55,7 +75,7 @@
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p><i> {{ post.author_list }} </i><br><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
@@ -66,29 +86,28 @@
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
     
-    <!-- {% if post.citation and post.paperurl and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
-    {% elsif post.citation and post.paperurl %}
-      <!-- <p>Recommended citation: {{ post.citation }} <br /> <a href="{{ post.paperurl }}">Download Paper</a></p> -->
-      <!-- <p>
-        <button onclick="toggleCitation()">Show Citation</button>
+    
+    <div style="display: flex; gap: 10px;"> <!-- Flexbox for inline buttons with some spacing -->
+    {% if post.citation %}  
+      <p>
+        <button onclick="toggleCitation()" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Show Bibtex</button>
       </p>
-      <p id="citation" style="display:none;">Recommended citation: {{ post.citation }}</p>
-    {% elsif post.citation and post.slidesurl %}
-      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
-    {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }}</p>
-    {% elsif post.paperurl %}
-      <p><a href=" {{ post.paperurl }} ">Download Paper</a></p>
-    {% elsif post.slidesurl %}
-      <p>Download <a href="{{ post.slidesurl }}">Download Slides</a></p></p>
-    {% endif %} --> 
-    {% if post.citation %}
-    <p>
-      <button onclick="toggleCitation()" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">Bibtex</button>
-    </p>
-    <pre id="citation" style="display:none; background-color: #f4f4f9; border-left: 4px solid #4CAF50; padding: 20px; white-space: pre-wrap; word-wrap: break-word; font-family: 'Courier New', Courier, monospace; color: #333; line-height: 1.5; font-size: 14px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">{{ post.citation }}</pre>
     {% endif %}
+    {% if post.pdf %}
+    <p>
+      <a href="{{ post.pdf }}" download>
+        <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">
+          Download PDF
+        </button>
+      </a>
+    </p>
+    {% endif %}
+    </div>
 
+    <div id="citationContainer" style="display:none; background-color: #f4f4f9; border-left: 4px solid #4CAF50; padding: 20px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); position: relative;">
+      <pre id="citation" style="white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; font-family: 'Courier New', Courier, monospace; font-size: 12px;">{{ post.citation }}</pre>
+      <button onclick="copyCitation()" id="copyButton" style="padding: 5px 15px; background-color: #2196F3; color: white; border: none; border-radius: 5px; font-size: 14px; cursor: pointer; transition: background-color 0.3s; position: absolute; top: 10px; right: 10px;">Copy Bibtex</button>
+    </div>
+    
   </article>
 </div>

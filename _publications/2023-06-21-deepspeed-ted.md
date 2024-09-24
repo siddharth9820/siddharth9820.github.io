@@ -2,11 +2,13 @@
 title: "A Hybrid Tensor-Expert-Data Parallelism Approach to Optimize Mixture-of-Experts Training"
 collection: publications
 category: conferences
-permalink: /publication/2023-06-21-deepspeed-ted-moe
-excerpt: 'This paper is about fixing template issue #693.'
+permalink: 
+excerpt:  ""
+author_list: '<b>S. Singh</b>, O. Ruwase, A. Ahmad Awan, S. Rajbhandari, Y. He, A. Bhatele'
 date: 2023-06-21 
 venue: "ICS '23: Proceedings of the 37th International Conference on Supercomputing"
 paperurl: 'https://dl.acm.org/doi/abs/10.1145/3577193.3593704'
+pdf: /publications/paper_pdfs/ds_ted.pdf
 citation: |
     @inproceedings{10.1145/3577193.3593704,
     author = {Singh, Siddharth and Ruwase, Olatunji and Awan, Ammar Ahmad and Rajbhandari, Samyam and He, Yuxiong and Bhatele, Abhinav},
@@ -27,4 +29,4 @@ citation: |
     }
 ---
 
-Lorem ipsum
+
