@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: 
 excerpt:  ""
-author_list: '<b>S. Singh</b>, A. Bhatele'
+author_list: '<b>Siddharth Singh</b> and Abhinav Bhatele'
 date: 2023-05-15 
 venue: "2023 IEEE International Parallel and Distributed Processing Symposium (IPDPS)"
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/10177389'

@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: 
 excerpt:  ""
-author_list: '<b>S. Singh</b>, O. Ruwase, A. Ahmad Awan, S. Rajbhandari, Y. He, A. Bhatele'
+author_list: '<b>Siddharth Singh</b>, Olatunji Ruwase, Ammar Ahmad Awan, Samyam Rajbhandari, Yuxiong He, and Abhinav Bhatele'
 date: 2023-06-21 
 venue: "ICS '23: Proceedings of the 37th International Conference on Supercomputing"
 paperurl: 'https://dl.acm.org/doi/abs/10.1145/3577193.3593704'
