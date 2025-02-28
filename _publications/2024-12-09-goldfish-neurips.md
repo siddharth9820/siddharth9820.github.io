@@ -7,6 +7,7 @@ excerpt:  ""
 author_list: 'Abhimanyu Hans, John Kirchenbauer, Yuxin Wen, Neel Jain, Hamid Kazemi, Prajwal Singhania, <b>Siddharth Singh</b>, Gowthami Somepalli, Jonas Geiping, Abhinav Bhatele, and Tom Goldstein'
 date: 2024-12-09 
 venue: "Advances in Neural Information Processing Systems 37 (NeurIPS)"
+venue_short: "Neurips"
 paperurl: 'https://arxiv.org/pdf/2406.10209'
 pdf: /publications/paper_pdfs/goldfish.pdf
 citation: |

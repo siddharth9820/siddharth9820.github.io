@@ -10,6 +10,7 @@ venue: "SC'24: Proceedings of the ACM/IEEE International Conference for High Per
 extra: "<b>ACM Gordon Bell Finalist</b>"
 paperurl: 'https://arxiv.org/abs/2502.08145'
 pdf: /publications/paper_pdfs/democ_ai.pdf
+venue_short: SC
 citation: |
     @inproceedings{10.1109/SC41406.2024.00010,
     author = {Singh, Siddharth and Singhania, Prajwal and Ranjan, Aditya and Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Jain, Neel and Hans, Abhimanyu and Shu, Manli and Tomar, Aditya and Goldstein, Tom and Bhatele, Abhinav},

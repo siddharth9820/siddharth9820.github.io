@@ -12,6 +12,17 @@
   {% assign title = post.title %}
 {% endif %}
 
+<style>
+  .publication-entry {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .publication-venue-icon {
+    min-width: 80px;
+    text-align: center;
+  }
+</style>
   
 
 <div class="{{ include.type | default: "list" }}__item">
@@ -27,6 +38,17 @@
           alt="">
       </div>
     {% endif %}
+
+    <div class="publication-entry" style="display: flex; align-items: center;">
+      {% if post.venue_short %}
+        <div class="publication-venue-icon" style="margin-right: 15px;">
+          <p style="font-weight: bold; color: #666;">
+            {{ post.venue_short }} {{ post.date | date: "%y" }}
+          </p>
+        </div>
+      {% endif %}
+      
+    <div class="publication-details">
 
     <h2 class="archive__item-title" itemprop="headline" style="color: #4A77D4;">
       {% if post.link %}
@@ -86,5 +108,7 @@
       <button onclick="copyCitation()" id="copyButton" style="padding: 5px 15px; background-color: #2196F3; color: white; border: none; border-radius: 5px; font-size: 14px; cursor: pointer; transition: background-color 0.3s; position: absolute; top: 10px; right: 10px;">Copy Bibtex</button>
     </div>
      -->
+    </div> <!-- Close .publication-details -->
+  </div> <!-- Close .publication-entry -->
   </article>
 </div>

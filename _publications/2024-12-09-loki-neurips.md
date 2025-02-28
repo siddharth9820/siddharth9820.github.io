@@ -7,6 +7,7 @@ excerpt:  ""
 author_list: 'Prajwal Singhania, <b>Siddharth Singh</b>, Shwai He, Soheil Feizi, and Abhinav Bhatele'
 date: 2024-12-09 
 venue: "Advances in Neural Information Processing Systems 37 (NeurIPS)"
+venue_short: "Neurips"
 paperurl: 'https://arxiv.org/abs/2406.02542'
 pdf: /publications/paper_pdfs/loki.pdf
 citation: |
@@ -21,7 +22,6 @@ citation: |
     volume = {37},
     year = {2024}
     }
-
 ---
 
 

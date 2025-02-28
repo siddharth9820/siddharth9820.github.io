@@ -7,6 +7,7 @@ excerpt:  ""
 author_list: '<b>Siddharth Singh</b> and Abhinav Bhatele'
 date: 2022-05-30 
 venue: "2022 IEEE International Parallel and Distributed Processing Symposium (IPDPS)"
+venue_short: IPDPS
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/9820664'
 pdf: /publications/paper_pdfs/axonn_pp.pdf
 citation: |

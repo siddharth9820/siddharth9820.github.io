@@ -7,6 +7,7 @@ excerpt:  ""
 author_list: '<b>Siddharth Singh</b>, Olatunji Ruwase, Ammar Ahmad Awan, Samyam Rajbhandari, Yuxiong He, and Abhinav Bhatele'
 date: 2023-06-21 
 venue: "ICS '23: Proceedings of the 37th International Conference on Supercomputing"
+venue_short: ICS
 paperurl: 'https://dl.acm.org/doi/abs/10.1145/3577193.3593704'
 pdf: /publications/paper_pdfs/ds_ted.pdf
 citation: |
