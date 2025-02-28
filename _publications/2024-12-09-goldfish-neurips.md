@@ -10,14 +10,18 @@ venue: "Advances in Neural Information Processing Systems 37 (NeurIPS)"
 paperurl: 'https://arxiv.org/pdf/2406.10209'
 pdf: /publications/paper_pdfs/goldfish.pdf
 citation: |
-  @misc{hans2024likegoldfishdontmemorize,
-      title={Be like a Goldfish, Don't Memorize! Mitigating Memorization in Generative LLMs}, 
-      author={Abhimanyu Hans and Yuxin Wen and Neel Jain and John Kirchenbauer and Hamid Kazemi and Prajwal Singhania and Siddharth Singh and Gowthami Somepalli and Jonas Geiping and Abhinav Bhatele and Tom Goldstein},
-      year={2024},
-      eprint={2406.10209},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2406.10209},}
+    @inproceedings{NEURIPS2024_2ad2dffb,
+    author = {Hans, Abhimanyu and Kirchenbauer, John and Wen, Yuxin and Jain, Neel and Kazemi, Hamid and Singhania, Prajwal and Singh, Siddharth and Somepalli, Gowthami and Geiping, Jonas and Bhatele, Abhinav and Goldstein, Tom},
+    booktitle = {Advances in Neural Information Processing Systems},
+    editor = {A. Globerson and L. Mackey and D. Belgrave and A. Fan and U. Paquet and J. Tomczak and C. Zhang},
+    pages = {24022--24045},
+    publisher = {Curran Associates, Inc.},
+    title = {Be like a Goldfish, Don\textquotesingle t Memorize! Mitigating Memorization in Generative LLMs},
+    url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/2ad2dffba5079687651226ac8752df97-Paper-Conference.pdf},
+    volume = {37},
+    year = {2024}
+    }
+
 ---
 
 

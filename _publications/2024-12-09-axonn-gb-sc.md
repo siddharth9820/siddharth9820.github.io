@@ -8,9 +8,24 @@ author_list: '<b>Siddharth Singh</b>, Prajwal Singhania, Aditya Ranjan, John Kir
 date: 2024-11-19 
 venue: "SC'24: Proceedings of the ACM/IEEE International Conference for High Performance Computing, Networking, Storage and Analysis"
 extra: "<b>ACM Gordon Bell Finalist</b>"
-paperurl: ''
-pdf: 
+paperurl: 'https://arxiv.org/abs/2502.08145'
+pdf: /publications/paper_pdfs/democ_ai.pdf
 citation: |
+    @inproceedings{10.1109/SC41406.2024.00010,
+    author = {Singh, Siddharth and Singhania, Prajwal and Ranjan, Aditya and Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Jain, Neel and Hans, Abhimanyu and Shu, Manli and Tomar, Aditya and Goldstein, Tom and Bhatele, Abhinav},
+    title = {Democratizing AI: Open-source Scalable LLM Training on GPU-based Supercomputers},
+    year = {2024},
+    isbn = {9798350352917},
+    publisher = {IEEE Press},
+    url = {https://doi.org/10.1109/SC41406.2024.00010},
+    doi = {10.1109/SC41406.2024.00010},
+    booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage, and Analysis},
+    articleno = {4},
+    numpages = {14},
+    keywords = {GPGPUs, asynchrony, collective communication, large language models, parallel training},
+    location = {Atlanta, GA, USA},
+    series = {SC '24}
+    }
 ---
 
 
